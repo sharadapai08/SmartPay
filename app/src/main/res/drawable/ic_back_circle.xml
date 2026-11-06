@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <!-- circle outline -->
+    <path
+        android:strokeWidth="2"
+        android:strokeColor="@color/text_secondary"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M18,2 A16,16 0 1,1 17.99,2 Z"/>
+    <!-- arrow -->
+    <path
+        android:fillColor="@color/text_primary"
+        android:pathData="M22,17H12.83l3.59,-3.59L15,12l-6,6 6,6 1.41,-1.41L12.83,19H22v-2z"/>
+</vector>

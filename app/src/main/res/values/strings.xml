@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">SmartPay</string>
+
+    <!-- Login / Register -->
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="new_user">NEW USER?</string>
+    <string name="already_user">Already have an account? Login</string>
+
+    <!-- Home -->
+    <string name="home">HOME</string>
+    <string name="wallet_balance">WALLET BALANCE</string>
+    <string name="enter_pin_to_display">Enter PIN to display balance</string>
+    <string name="add_money">ADD MONEY</string>
+    <string name="send_money">SEND MONEY</string>
+    <string name="receive_money">RECEIVE MONEY</string>
+    <string name="scan_qr">SCAN QR</string>
+    <string name="transactions">TRANSACTIONS</string>
+    <string name="profile">PROFILE</string>
+    <string name="logout">LOGOUT</string>
+    <string name="notifications">NOTIFICATIONS</string>
+
+    <!-- Add Money -->
+    <string name="enter_amount">ENTER AMOUNT</string>
+    <string name="select_payment_method">SELECT PAYMENT METHOD</string>
+    <string name="upi_id_bank">UPI ID / BANK</string>
+    <string name="debit_credit_card">DEBIT / CREDIT CARD</string>
+    <string name="quick_amounts">QUICK AMOUNTS</string>
+    <string name="secure_transactions">100% Secure Transactions</string>
+    <string name="proceed">PROCEED</string>
+
+    <!-- UPI / Bank -->
+    <string name="enter_upi_id">ENTER UPI ID</string>
+    <string name="upi_hint">name@upi</string>
+    <string name="upi_info">Enter your UPI ID to proceed with payment</string>
+    <string name="or_select_bank">OR SELECT BANK</string>
+    <string name="search_bank">Search bank</string>
+    <string name="view_all_banks">VIEW ALL BANKS</string>
+
+    <!-- Card Payment -->
+    <string name="enter_card_details">ENTER CARD DETAILS</string>
+    <string name="card_number_hint">1234 5678 9012 3456</string>
+    <string name="mm_yy">MM / YY</string>
+    <string name="cvv">CVV</string>
+    <string name="cardholder_name">CARDHOLDER NAME</string>
+    <string name="name_on_card">Name on card</string>
+    <string name="card_secure_msg">Your card details are secure and encrypted</string>
+
+    <!-- Send Money -->
+    <string name="enter_recipient_details">ENTER RECIPIENT DETAILS</string>
+    <string name="mobile_upi_id">MOBILE NUMBER / UPI ID</string>
+    <string name="recipient_name">RECIPIENT NAME</string>
+    <string name="amount">AMOUNT</string>
+    <string name="add_note_optional">ADD NOTE (OPTIONAL)</string>
+    <string name="cancel">CANCEL</string>
+
+    <!-- Confirm & Send -->
+    <string name="confirm_and_send">CONFIRM &amp; SEND</string>
+    <string name="amount_to_send">AMOUNT TO SEND</string>
+    <string name="note">NOTE</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="verify_details_msg">Please verify the details before sending.</string>
+
+    <!-- Money Sent -->
+    <string name="money_sent_successfully">MONEY SENT\nSUCCESSFULLY!</string>
+    <string name="view_transaction">VIEW TRANSACTION</string>
+    <string name="make_another_payment">MAKE ANOTHER PAYMENT</string>
+    <string name="done">DONE</string>
+
+    <!-- Receive Money -->
+    <string name="scan_and_pay">Scan &amp; Pay\nusing any UPI App</string>
+    <string name="share_qr">SHARE QR</string>
+    <string name="ask_payer_msg">Ask the payer to scan this QR code and make the payment.</string>
+    <string name="waiting_for_payment">Waiting for payment</string>
+    <string name="waiting_msg">Please don\'t close this screen until you receive the payment.</string>
+    <string name="payment_received">Payment Received!</string>
+    <string name="amount_received">AMOUNT RECEIVED</string>
+    <string name="view_transactions">VIEW TRANSACTIONS</string>
+    <string name="transaction_details">Transaction Details</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="from">From</string>
+    <string name="upi_transaction_id">UPI Transaction ID</string>
+    <string name="paid_to">Paid to</string>
+
+    <!-- QR Scanner -->
+    <string name="qr_scanner">QR SCANNER</string>
+    <string name="align_qr_msg">Align QR code within the frame to scan</string>
+    <string name="gallery">GALLERY</string>
+    <string name="torch">TORCH</string>
+
+    <!-- Transactions -->
+    <string name="search_transactions">Search transactions</string>
+    <string name="filter_all">ALL</string>
+    <string name="filter_sent">SENT</string>
+    <string name="filter_received">RECEIVED</string>
+    <string name="filter_failed">FAILED</string>
+    <string name="type">TYPE</string>
+    <string name="date_and_time">DATE &amp; TIME</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="status">STATUS</string>
+
+    <!-- Profile -->
+    <string name="name">NAME</string>
+    <string name="email">EMAIL</string>
+    <string name="phone">PHONE</string>
+    <string name="account_details">ACCOUNT DETAILS</string>
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="upi_id">UPI ID</string>
+    <string name="bank">Bank</string>
+    <string name="ac_no">A/C No.</string>
+
+    <!-- Notifications -->
+    <string name="today">TODAY</string>
+    <string name="money_received">Money received</string>
+
+    <!-- Logout -->
+    <string name="logout_question">Logout?</string>
+    <string name="logout_confirm_msg">Are you sure you want to log out of your account?</string>
+
+    <!-- PIN dialog -->
+    <string name="enter_pin">Enter PIN</string>
+    <string name="enter_pin_msg">Enter your 4-digit PIN to view balance</string>
+    <string name="pin_hint">● ● ● ●</string>
+    <string name="show">SHOW</string>
+
+    <!-- Errors / toasts -->
+    <string name="error_fill_all_fields">Please fill in all fields</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_insufficient_balance">Insufficient wallet balance</string>
+    <string name="error_user_not_found">User not found</string>
+    <string name="error_enter_amount">Please enter an amount</string>
+    <string name="error_invalid_amount">Please enter a valid amount</string>
+    <string name="success_money_added">Money added successfully!</string>
+    <string name="success_registration">Registration successful!</string>
+    <string name="sent_to">Sent to</string>
+    <string name="received_from">Received from</string>
+</resources>

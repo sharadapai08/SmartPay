@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- White Rupee symbol centered on launcher icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Indian Rupee (₹) Symbol in White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M57.5,38 H44 v3.5 h6.5 c2.5,0 4.6,1.4 5.7,3.5 H44 v3.5 h12.2 c-0.6,2.8 -3.1,5 -6.2,5 H44 v2.5 l9.5,14 H60 l-9.5,-14 h1.5 c4.7,0 8.6,-3.4 9.4,-8 H64 v-3.5 h-6.3 c-0.2,-0.6 -0.6,-1.2 -1.1,-1.7 H64 V38 z" />
+</vector>

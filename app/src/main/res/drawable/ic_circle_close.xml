@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <!-- Circle border -->
+    <path
+        android:strokeColor="@color/fail_red"
+        android:strokeWidth="1.2"
+        android:fillColor="#00000000"
+        android:pathData="M10,1 A9,9 0 1,1 9.99,1 Z"/>
+    <!-- Cross -->
+    <path
+        android:fillColor="@color/fail_red"
+        android:pathData="M14.5,6.5 L13.5,5.5 L10,9 L6.5,5.5 L5.5,6.5 L9,10 L5.5,13.5 L6.5,14.5 L10,11 L13.5,14.5 L14.5,13.5 L11,10 Z"/>
+</vector>

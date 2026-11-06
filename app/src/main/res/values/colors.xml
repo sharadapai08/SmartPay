@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Project Brief exact colors -->
+    <!-- Primary (navy, buttons, app bar accents): #0B1F4D -->
+    <color name="primary">#0B1F4D</color>
+    <color name="primary_dark">#0B1F4D</color>
+    <!-- Primary variant: #14337A -->
+    <color name="primary_variant">#14337A</color>
+    <color name="primary_dark_pressed">#14337A</color>
+    <!-- Accent / links: #1E5EFF -->
+    <color name="accent">#1E5EFF</color>
+    <color name="text_link">#1E5EFF</color>
+    <!-- Background: #F5F7FB -->
+    <color name="background">#F5F7FB</color>
+    <color name="screen_bg">#F5F7FB</color>
+    <!-- Surface / cards: #FFFFFF -->
+    <color name="surface">#FFFFFF</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="input_bg">#FFFFFF</color>
+
+    <!-- Text primary: #1A1F36 -->
+    <color name="text_primary">#1A1F36</color>
+    <!-- Text secondary: #6B7280 -->
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Success (sent OK, received): #1E8E3E -->
+    <color name="success">#1E8E3E</color>
+    <color name="success_green">#1E8E3E</color>
+    <!-- Error / failed / logout: #D93025 -->
+    <color name="error">#D93025</color>
+    <color name="fail_red">#D93025</color>
+    <!-- Warning note bg: #FFF4D6 -->
+    <color name="warning_note_bg">#FFF4D6</color>
+    <color name="info_bg">#FFF4D6</color>
+    <!-- Info note bg: #E8F1FF -->
+    <color name="info_note_bg">#E8F1FF</color>
+    <color name="info_bg_blue">#E8F1FF</color>
+
+    <!-- Home tile icon backgrounds -->
+    <!-- Send #E3F2FD -->
+    <color name="icon_bg_send">#E3F2FD</color>
+    <!-- Receive #E6F6EA -->
+    <color name="icon_bg_receive">#E6F6EA</color>
+    <!-- Scan QR #ECE9FB -->
+    <color name="icon_bg_qr">#ECE9FB</color>
+    <!-- Transactions #FFF3D6 -->
+    <color name="icon_bg_transactions">#FFF3D6</color>
+    <!-- Profile #ECE9FB -->
+    <color name="icon_bg_profile">#ECE9FB</color>
+    <!-- Logout #FDE7E7 -->
+    <color name="icon_bg_logout">#FDE7E7</color>
+    <color name="icon_bg_add_money">#E3F2FD</color>
+
+    <!-- Card and input borders (1dp light border) -->
+    <color name="balance_card_border">#D8E2F0</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="divider_color">#E5E7EB</color>
+    <color name="input_border">#D1D5DB</color>
+    <color name="input_border_focused">#0B1F4D</color>
+    <color name="cancel_border">#D1D5DB</color>
+
+    <!-- Quick amount chips -->
+    <color name="chip_bg">#F3F4F6</color>
+    <color name="chip_bg_selected">#0B1F4D</color>
+    <color name="chip_text_selected">#FFFFFF</color>
+
+    <!-- Notifications -->
+    <color name="notification_unread_bg">#FFFFFF</color>
+    <color name="notification_dot">#1E8E3E</color>
+
+    <!-- Password strength indicators -->
+    <color name="strength_weak">#D93025</color>
+    <color name="strength_medium">#D97706</color>
+    <color name="strength_strong">#1E8E3E</color>
+
+    <!-- Splash screen colors -->
+    <color name="splash_subtitle">#8EA5D4</color>
+    <color name="splash_demo_note">#6B82AF</color>
+</resources>

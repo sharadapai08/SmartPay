@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- White rounded square with navy ₹ symbol for SmartPay Splash -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- White rounded square -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 36,18 H 72 A 18,18 0 0 1 90,36 V 72 A 18,18 0 0 1 72,90 H 36 A 18,18 0 0 1 18,72 V 36 A 18,18 0 0 1 36,18 Z" />
+    <!-- Navy Indian Rupee (₹) Symbol in Center (#0B1F4D) -->
+    <path
+        android:fillColor="#0B1F4D"
+        android:pathData="M57.5,38 H44 v3.5 h6.5 c2.5,0 4.6,1.4 5.7,3.5 H44 v3.5 h12.2 c-0.6,2.8 -3.1,5 -6.2,5 H44 v2.5 l9.5,14 H60 l-9.5,-14 h1.5 c4.7,0 8.6,-3.4 9.4,-8 H64 v-3.5 h-6.3 c-0.2,-0.6 -0.6,-1.2 -1.1,-1.7 H64 V38 z" />
+</vector>

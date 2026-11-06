@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <!-- Centered Brand Logo & Typography Group -->
+    <LinearLayout
+        android:id="@+id/layoutSplashContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.46">
+
+        <!-- App Icon Artwork: White Rounded Square with Navy ₹ Symbol -->
+        <ImageView
+            android:id="@+id/ivSplashLogo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_splash_logo"
+            android:contentDescription="SmartPay Logo" />
+
+        <!-- App Name: Bold White -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SmartPay"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.03"
+            android:fontFamily="sans-serif" />
+
+        <!-- Tagline: Light Grey-Blue -->
+        <TextView
+            android:id="@+id/tvAppTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Digital Payment Application"
+            android:textColor="@color/splash_subtitle"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.04" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

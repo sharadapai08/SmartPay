@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared menu for Send Money, Confirm Send screens -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_add_money"
+        android:title="ADD MONEY" />
+    <item
+        android:id="@+id/menu_receive_money"
+        android:title="RECEIVE MONEY" />
+    <item
+        android:id="@+id/menu_scan_qr"
+        android:title="SCAN QR" />
+    <item
+        android:id="@+id/menu_transactions"
+        android:title="TRANSACTIONS" />
+    <item
+        android:id="@+id/menu_profile"
+        android:title="PROFILE" />
+</menu>

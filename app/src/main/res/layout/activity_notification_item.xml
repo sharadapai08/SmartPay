@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_notification_card"
+    android:layout_marginBottom="12dp"
+    android:padding="12dp">
+
+    <!-- Icon -->
+    <ImageView
+        android:id="@+id/ivNotifIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_receive_green"
+        android:background="@drawable/bg_avatar_circle"
+        android:padding="8dp"
+        android:contentDescription="Notification icon"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <!-- Green Dot -->
+    <View
+        android:id="@+id/viewUnreadDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@color/notification_dot"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Content Column -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/ivNotifIcon"
+        android:layout_toStartOf="@+id/dotSpace"
+        android:layout_centerVertical="true"
+        android:paddingStart="12dp">
+
+        <!-- Title + Time Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvNotifTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Money received"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvNotifTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvNotifDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="2dp" />
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvNotifDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Invisible spacer for dot alignment -->
+    <View
+        android:id="@+id/dotSpace"
+        android:layout_width="16dp"
+        android:layout_height="1dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

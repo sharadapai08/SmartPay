@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Down arrow in circle = receive -->
+    <path
+        android:fillColor="@color/text_secondary"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM13,17.59V14h-2v3.59L8.41,15 7,16.41l5,5 5,-5L15.59,15 13,17.59zM11,10V6h2v4h2.59L12,13.41 8.41,10H11z"/>
+</vector>

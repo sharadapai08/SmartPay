@@ -1,0 +1,91 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "users": {
+      ".read": "auth != null",
+      ".indexOn": ["phone", "upiId", "email"],
+
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['name', 'email', 'phone', 'upiId'])",
+
+        "name":      { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 50" },
+        "email":     { ".validate": "newData.isString() && newData.val().contains('@')" },
+        "phone":     { ".validate": "newData.isString() && newData.val().matches('^[0-9]{10}$')" },
+        "upiId":     { ".validate": "newData.isString()" },
+        "createdAt": { ".validate": "newData.isNumber()" },
+        "photoBase64": { ".validate": "newData.isString()" },
+        "bankAccounts": {
+          "$accountId": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.hasChildren(['bankName', 'accountNumber', 'ifsc', 'accountHolder', 'addedAt'])"
+          }
+        },
+        "balance": {
+          // Any authenticated user can write balance (sender credits receiver via ServerValue.increment)
+          // Note: ServerValue.increment is a server-side op; newData.val() returns null during validation,
+          // so we cannot validate the resulting value here — rely on app-level checks instead.
+          ".write": "auth != null"
+        }
+      }
+    },
+
+    "userPins": {
+      "$uid": {
+        ".read":  "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['pinHash', 'pinSalt'])",
+        "pinHash":    { ".validate": "newData.isString() && newData.val().length > 0" },
+        "pinSalt":    { ".validate": "newData.isString() && newData.val().length > 0" }
+      }
+    },
+
+    "transactions": {
+      ".indexOn": ["senderId", "receiverId", "timestamp"],
+      // Allow orderByChild("senderId").equalTo(uid) and orderByChild("receiverId").equalTo(uid) queries
+      ".read": "auth != null && (query.orderByChild === 'senderId' && query.equalTo === auth.uid || query.orderByChild === 'receiverId' && query.equalTo === auth.uid)",
+      ".write": "auth != null", // Allow authenticated users to write new transactions
+
+      "$txId": {
+        // Direct key-based read: sender or receiver can read their own record
+        ".read": "auth != null && (data.child('senderId').val() === auth.uid || data.child('receiverId').val() === auth.uid)",
+        // Any authenticated user can create a transaction (sender writes both SENT and RECEIVED records)
+        ".write": "auth != null && !data.exists()",
+        ".validate": "newData.hasChildren(['senderId', 'receiverId', 'amount', 'type', 'status', 'timestamp']) && newData.child('amount').isNumber() && newData.child('amount').val() > 0 && newData.child('amount').val() <= 50000 && (newData.child('type').val() === 'SENT' || newData.child('type').val() === 'RECEIVED' || newData.child('type').val() === 'ADD_MONEY' || newData.child('type').val() === 'QR_PAYMENT' || newData.child('type').val() === 'FAILED') && (newData.child('status').val() === 'SUCCESS' || newData.child('status').val() === 'FAILED') && newData.child('timestamp').isNumber()"
+      }
+    },
+
+    "userTransactions": {
+      "$uid": {
+        ".read":  "auth != null && auth.uid === $uid",
+        ".write": "auth != null",
+        ".indexOn": ["timestamp"]
+      }
+    },
+
+    "notifications": {
+      "$uid": {
+        // Owner can read all their notifications and mark them as read
+        ".read":  "auth != null && auth.uid === $uid",
+        ".indexOn": ["timestamp", "read"],
+
+        "$notificationId": {
+          // Any authenticated user can create a notification for any recipient (sender notifies receiver)
+          // Owner can also update (mark read) or delete their own notifications
+          ".write": "auth != null && (!data.exists() || auth.uid === $uid)",
+          ".validate": "newData.hasChildren(['title', 'message', 'timestamp', 'read']) && newData.child('title').isString() && newData.child('title').val().length <= 100 && newData.child('message').isString() && newData.child('message').val().length <= 300 && newData.child('timestamp').isNumber() && newData.child('read').isBoolean()"
+        }
+      }
+    },
+
+    "QRPayments": {
+      "$uid": {
+        ".read":  "auth != null",
+        ".write": "auth != null",
+        ".validate": "newData.hasChildren(['userId', 'userName']) || newData.hasChild('scannedAt')"
+      }
+    }
+  }
+}
